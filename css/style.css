@@ -1,0 +1,100 @@
+#box1,#box2,#box3,#box4,#box5{
+    height: 200px;
+}
+.buttonChange{
+    font-size: 2em;
+    padding: 20px;
+}
+#result{
+    height: 100%;
+}
+td{
+    background: rgba(21, 2, 51,0.5);
+    color: white;
+}
+input[type="checkbox"]{
+ visibility: hidden;   
+}
+input[type="checkbox"]::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: rgb(147, 32, 170);
+    position: absolute;
+    visibility: visible;
+    z-index: 20;
+}
+input[type="checkbox"]:checked::before{
+    content: "\2713";
+    position: absolute;
+    line-height: 20px;
+    font-size: 20px;
+}
+/* animation */
+.main{
+    position: fixed;
+    left: -50%;
+    right: -50%;
+    top: 0;
+    bottom: 0;
+    opacity: 0.5;
+    animation: animateHamza 3s ease-in-out 0s infinite alternate;
+    -webkit-animation: animateHamza 3s ease-in-out 0s infinite alternate;
+    -moz-animation: animateHamza 3s ease-in-out 0s infinite alternate;
+    -o-animation: animateHamza 3s ease-in-out 0s infinite alternate;
+    z-index: -1;
+}
+.div1{
+    background-image: linear-gradient(-60deg, rgb(27, 233, 216) 50%, rgb(222,22,14) 50%);
+}
+.div2{
+    background-image: linear-gradient(-60deg, rgb(223, 28, 248) 50%, rgba(152, 242, 12) 50%);
+    animation-direction: alternate-reverse;
+    -moz-animation-direction:  alternate-reverse;
+    -webkit-animation-direction:  alternate-reverse;
+    -o-animation-direction:  alternate-reverse;
+    animation-duration: 6s;
+    -o-animation-duration: 6s;
+    -moz-animation-duration: 6s;
+    -webkit-animation-duration: 6s;
+}
+.div3{
+    background-image: linear-gradient(-60deg, rgb(4, 196, 52) 50%, rgba(155, 25, 59) 50%);
+    animation-duration: 9s;
+    -o-animation-duration: 9s;
+    -moz-animation-duration: 9s;
+    -webkit-animation-duration: 9s;
+}
+
+@keyframes animateHamza{
+    0%{
+        transform: translate(-25%);
+    }
+    100%{
+        transform: translate(25%);
+    }
+}
+@-moz-keyframes animateHamza{
+    0%{
+        transform: translate(-25%);
+    }
+    100%{
+        transform: translate(25%);
+    }
+}
+@-o-keyframes animateHamza{
+    0%{
+        transform: translate(-25%);
+    }
+    100%{
+        transform: translate(25%);
+    }
+}
+@-webkit-keyframes animateHamza{
+    0%{
+        transform: translate(-25%);
+    }
+    100%{
+        transform: translate(25%);
+    }
+}

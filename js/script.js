@@ -27,16 +27,17 @@ var colm="";
         }
     }
     count=0;
-    for(var k=0;k<Math.ceil(mainData.length/4);k++)
+    for(var k=0;k<Math.ceil(mainData.length/3);k++)
     {
-        for(var i=0;i<4;i++)
+        for(var i=0;i<3;i++)
         {
-            if(count<=mainData.length)
+            if(count<=mainData.length-1)
             {
                 colm+=`
             <td>${mainData[count]}</td>
             `;
             count++;
+
             }
         }
         row+=`
@@ -45,7 +46,7 @@ var colm="";
         colm="";
     }
 box1.innerHTML=`
-<table class="table table-borderless table-hover">${row}</table>
+<table class="table-borderless table-hover w-100">${row}</table>
 `;
 }
 function box2Data(){
@@ -78,11 +79,11 @@ function box2Data(){
             }
         }
         count=0;
-        for(var k=0;k<Math.ceil(mainData.length/4);k++)
+        for(var k=0;k<Math.ceil(mainData.length/3);k++)
         {
-            for(var i=0;i<4;i++)
+            for(var i=0;i<3;i++)
             {
-                if(count<=mainData.length)
+                if(count<=mainData.length-1)
                 {
                     colm+=`
                 <td>${mainData[count]}</td>
@@ -96,7 +97,7 @@ function box2Data(){
             colm="";
         }
     box2.innerHTML=`
-    <table class="table table-borderless table-hover">${row}</table>
+    <table class="table-borderless table-hover w-100">${row}</table>
     `;
 }
 function box3Data(){
@@ -135,11 +136,11 @@ function box3Data(){
             }
         }
         count=0;
-        for(var k=0;k<Math.ceil(mainData.length/4);k++)
+        for(var k=0;k<Math.ceil(mainData.length/3);k++)
         {
-            for(var i=0;i<4;i++)
+            for(var i=0;i<3;i++)
             {
-                if(count<=mainData.length)
+                if(count<=mainData.length-1)
                 {
                     colm+=`
                 <td>${mainData[count]}</td>
@@ -153,7 +154,7 @@ function box3Data(){
             colm="";
         }
     box3.innerHTML=`
-    <table class="table table-borderless table-hover">${row}</table>
+    <table class="table-borderless table-hover w-100">${row}</table>
     `;
 }
 function box4Data(){
@@ -198,11 +199,11 @@ function box4Data(){
             }
         }
         count=0;
-        for(var k=0;k<Math.ceil(mainData.length/4);k++)
+        for(var k=0;k<Math.ceil(mainData.length/3);k++)
         {
-            for(var i=0;i<4;i++)
+            for(var i=0;i<3;i++)
             {
-                if(count<=mainData.length)
+                if(count<=mainData.length-1)
                 {
                     colm+=`
                 <td>${mainData[count]}</td>
@@ -216,7 +217,7 @@ function box4Data(){
             colm="";
         }
     box4.innerHTML=`
-    <table class="table table-borderless table-hover">${row}</table>
+    <table class="table-borderless table-hover w-100">${row}</table>
     `;
 }
 function box5Data(){
@@ -267,11 +268,11 @@ function box5Data(){
             }
         }
         count=0;
-        for(var k=0;k<Math.ceil(mainData.length/4);k++)
+        for(var k=0;k<Math.ceil(mainData.length/3);k++)
         {
-            for(var i=0;i<4;i++)
+            for(var i=0;i<3;i++)
             {
-                if(count<=mainData.length)
+                if(count<=mainData.length-1)
                 {
                     colm+=`
                 <td>${mainData[count]}</td>
@@ -285,7 +286,7 @@ function box5Data(){
             colm="";
         }
     box5.innerHTML=`
-    <table class="table table-borderless table-hover">${row}</table>
+    <table class="table-borderless table-hover w-100">${row}</table>
     `;
 }
 button1.onclick=function(){
@@ -312,7 +313,7 @@ button1.onclick=function(){
     }
     if(checkBoxValue==0)
     {
-        alert("Select a number");
+        alert("Select a box first");
     }
     else{
         result.innerHTML=parseInt(checkBoxValue,2);

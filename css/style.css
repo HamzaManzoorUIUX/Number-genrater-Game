@@ -1,12 +1,12 @@
 #box1,#box2,#box3,#box4,#box5{
-    height: 200px;
+    height: 150px;
 }
 .buttonChange{
     font-size: 2em;
     padding: 20px;
 }
 #result{
-    height: 100%;
+    height: 120px;
 }
 td{
     background: rgba(21, 2, 51,0.5);
